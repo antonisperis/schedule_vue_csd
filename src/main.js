@@ -1,7 +1,14 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
+import router from './router'
+import vuetify from './plugins/vuetify'
+// import 'bootstrap/dist/css/bootstrap.css'
+import "../styles/scrollbar.css";
+import "../styles/cardStyles.css";
+Vue.config.productionTip = false
 
-createApp(App).mount('#app')
-
-import 'bootstrap/dist/js/bootstrap.js'
+new Vue({
+  router,
+  vuetify,
+  render: h => h(App)
+}).$mount('#app')

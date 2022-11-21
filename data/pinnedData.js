@@ -4,7 +4,7 @@ const pinnedInfo = [
         isBrief: false,
         title: "HY-100 Assignment 2",
         date: "24/10/2022",
-        description: "Make an empty sudoku and try to solve it."
+        description: "Check if a sudoku is solved correctly, and after that make an empty sudoku and try to solve it. Finally, check your solution if it is correct."
     },
     {
         _uid: "gJZoSLkfZV",
@@ -36,4 +36,9 @@ const pinnedInfo = [
     }
 ];
 
-export { pinnedInfo };
+function addTask(taskJSON) {
+    pinnedInfo.push(taskJSON);
+    return;
+}
+
+export { pinnedInfo, addTask };

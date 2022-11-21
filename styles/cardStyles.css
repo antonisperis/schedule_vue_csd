@@ -25,6 +25,10 @@
 }
 
 .pinnedCard {
-    width: 95%;
     overflow: visible;
+}
+
+.calendar {
+    height: 300px;
+    margin: 0 auto !important;
 }

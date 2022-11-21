@@ -1,28 +1,18 @@
 <template>
-  <LeftSideTab tasks=[] />
+  <v-app>
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-import LeftSideTab from "./components/leftSideTab/LeftSideTab.vue"
 
 export default {
   name: 'App',
-  components: {
-    LeftSideTab
-  }
-}
+
+  data: () => ({
+    //
+  }),
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-@import "../styles/cardStyles.css";
-@import "../styles/scrollbar.css";
-</style>
