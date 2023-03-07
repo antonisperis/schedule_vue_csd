@@ -1,6 +1,6 @@
 <template>
     <h3 class="mt-0 ml-1 sectionTitle">{{ titleStr }}
-        <TaskFormCard :icon="iconStr" :iconCallBack="formSubmit" />
+        <TaskFormCard :icon="iconStr" :iconCallBack="formSubmit" :editMode="false" :editIcon="false" />
     </h3>
 </template>
 <script>

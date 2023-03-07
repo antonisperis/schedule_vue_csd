@@ -1,7 +1,7 @@
 <template>
     <div :key="tasksKey" style="margin-right:0;padding: 12px;">
-        <div id="taskList" v-for="item in weeklyFeed" :key="item._uid">
-            <PinnedCard :key="item._uid" :isBrief="item.isBrief" :title="item.title" :date="item.date" :description="item.description" />
+        <div id="taskList" v-for="i in weeklyFeed" :key="i._uid">
+            <PinnedCard :uid="i._uid" :reloadTaskList="forceRenderTasksList" />
             <!-- {{ item }} -->
         </div>
     </div>
@@ -13,22 +13,34 @@
 import PinnedCard from "../../cards/PinnedCard.vue";
 
 
-
 export default {
     name: 'WeeklyPinned',
-    props: ['weeklyFeed'],
+    // props: ['weeklyFeed'],
     data() {
         return {
             tasksKey: 0,
+            selectedItem: null
         }
     },
     methods: {
         forceRenderTasksList() {
-            this.tasksKey += 1;
+            console.log('reload weekly');
+            this.tasksKey = !this.tasksKey;
             return;
+        },
+        handleSelectItem(item) {
+            console.log(item);
+            // you can also handle toggle action here manually to open and close dropdown
         }
     },
     components: { PinnedCard },
+    computed: {
+        weeklyFeed() {
+            console.log(this.$store);
+            return this.$store.state.tasks;
+        }
+    },
+
     created() {
     }
 }

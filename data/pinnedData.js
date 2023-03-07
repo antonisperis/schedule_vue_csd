@@ -26,13 +26,6 @@ const pinnedInfo = [
         title: "HY-240 Project Phase A",
         date: "27/10/2022",
         description: "Make a network with nodes"
-    },
-    {
-        _uid: "X1ZewBAwee",
-        isBrief: true,
-        title: "HY-100 Assignment 2",
-        date: "24/10/2022",
-        description: "Make an empty sudoku and try to solve it."
     }
 ];
 
